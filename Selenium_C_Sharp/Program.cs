@@ -14,7 +14,7 @@ namespace Selenium_C_Sharp
         {
             String PATH = "C:/Users/DAPO/source/repos/Selenium_C_Sharp/packages/WebDriverChromeDriver.2.10/tools/chromedriver.exe";
 
-            IWebDriver driver = new ChromeDriver();
+            IWebDriver driver = new ChromeDriver(PATH);
 
             driver.Navigate().GoToUrl("https://www.google.com");
         }

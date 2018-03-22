@@ -16,7 +16,7 @@ namespace Selenium_C_Sharp
             String PATH = "C:/webdriver/";
             IWebDriver driver = new ChromeDriver(PATH);
 
-            driver.Navigate().GoToUrl("https://www.google.com");
+            driver.Navigate().GoToUrl("https://www.jet2holidays.com/");
         }
     }
 }

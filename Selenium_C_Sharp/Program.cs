@@ -11,17 +11,21 @@ namespace Selenium_C_Sharp
 {
     class Program
     {
+
+        public static String PATH = "C:/webdriver/";
+
+        public static IWebDriver driver = new ChromeDriver(PATH);
+
         static void Main(string[] args)
         {
             
-            String PATH = "C:/webdriver/";
-            IWebDriver driver = new ChromeDriver(PATH);
+            //String PATH = "C:/webdriver/";
+            //IWebDriver driver = new ChromeDriver(PATH);
 
             driver.Navigate().GoToUrl("https://www.jet2holidays.com/");
-
-            IReadOnlyCollection<IWebElement> element = driver.FindElements(By.ClassName("j017-close-lightbox"));
-            element.ElementAt(0).Click();
-            //element.Click();
+            
+            PageObjectModel.ClickPopUp();
+            
             driver.Close();
             PageObjectModel.Test1();
 

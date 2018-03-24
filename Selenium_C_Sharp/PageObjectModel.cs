@@ -22,5 +22,18 @@ namespace Selenium_C_Sharp
             IReadOnlyCollection<IWebElement> element = Program.driver.FindElements(By.ClassName("search-box-group__link"));
             element.ElementAt(0).Click();
         }
+
+        public static void Click_Departure_Airport(String Location)
+        {
+            IReadOnlyCollection<IWebElement> elements = Program.driver.FindElements(By.ClassName("checkbox-button-group__item"));
+            foreach(IWebElement element in elements)
+            {
+                if (element.Text == Location)
+                {
+                    element.Click();
+                }
+            }
+        }
+
     }
 }

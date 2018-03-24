@@ -23,9 +23,10 @@ namespace Selenium_C_Sharp
             PageObjectModel.ClickPopUp();
 
             PageObjectModel.Click_List_Departure();
+            PageObjectModel.Click_Departure_Airport("East Midlands (EMA)");
 
             //driver.Close();
-            
+
         }
     }
 }

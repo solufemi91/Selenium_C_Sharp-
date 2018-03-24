@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Selenium_C_Sharp
 {
     class Program
@@ -22,6 +23,8 @@ namespace Selenium_C_Sharp
             element.ElementAt(0).Click();
             //element.Click();
             driver.Close();
+            PageObjectModel.Test1();
+
 
         }
     }

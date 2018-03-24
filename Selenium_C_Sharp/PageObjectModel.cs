@@ -16,5 +16,11 @@ namespace Selenium_C_Sharp
             IReadOnlyCollection<IWebElement> element = Program.driver.FindElements(By.ClassName("j017-close-lightbox"));
             element.ElementAt(0).Click();
         }
+
+        public static void Click_List_Departure()
+        {
+            IReadOnlyCollection<IWebElement> element = Program.driver.FindElements(By.ClassName("search-box-group__link"));
+            element.ElementAt(0).Click();
+        }
     }
 }

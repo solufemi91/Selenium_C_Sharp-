@@ -18,8 +18,9 @@ namespace Selenium_C_Sharp
 
             driver.Navigate().GoToUrl("https://www.jet2holidays.com/");
 
-            IWebElement element = (IWebElement)driver.FindElement(By.ClassName("j017-close-lightbox"));
-            element.Click();
+            IReadOnlyCollection<IWebElement> element = driver.FindElements(By.ClassName("j017-close-lightbox"));
+            //element.Click();
+            driver.Close();
 
         }
     }

@@ -55,8 +55,8 @@ namespace Selenium_C_Sharp
 
         public static void Click_Date_Dropdown()
         {
-            IReadOnlyCollection<IWebElement> element = Program.driver.FindElements(By.ClassName("search-box-group__link"));
-            element.ElementAt(2).Click();
+            IWebElement element = Program.driver.FindElement(By.Id("search-box-leaving"));
+            element.Click();
         }
 
         public static void Select_Month(String Month)
@@ -83,6 +83,21 @@ namespace Selenium_C_Sharp
                     element.Click();
                 }
             }
+        }
+
+        public static void Select_Nights(int Nights)
+        {
+            IWebElement element = Program.driver.FindElement(By.Id("search-box-nights"));
+            element.Click();
+            IReadOnlyCollection<IWebElement> options = element.FindElements(By.TagName("option"));
+            options.ElementAt(Nights).Click();
+        }
+
+        public static void Find_Holiday()
+        {
+            IReadOnlyCollection<IWebElement> elements = Program.driver.FindElements(By.ClassName("search-box__submit"));
+            elements.ElementAt(0).Click();
+            
         }
 
 

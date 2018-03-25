@@ -27,7 +27,7 @@ namespace Selenium_C_Sharp
             PageObjectModel.Click_List_Departure();
 
             // click a airport
-            PageObjectModel.Click_Departure_Airport("East Midlands (EMA)");
+            PageObjectModel.Click_Departure_Airport("London Stansted (STN)");
 
             // click the dropdown for arrival airports
             PageObjectModel.Click_List_Arrival();
@@ -39,10 +39,16 @@ namespace Selenium_C_Sharp
             PageObjectModel.Click_Date_Dropdown();
 
             //select month
-            PageObjectModel.Select_Month("May");
+            PageObjectModel.Select_Month("March");
 
             //select day
-            PageObjectModel.Select_Day("21");
+            PageObjectModel.Select_Day("31");
+
+            //select nights
+            PageObjectModel.Select_Nights(0);
+
+            //find holiday
+            PageObjectModel.Find_Holiday();
 
             //driver.Close();
 

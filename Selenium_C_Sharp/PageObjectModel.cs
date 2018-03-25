@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,6 +81,8 @@ namespace Selenium_C_Sharp
             {
                 if (element.Text == Day)
                 {
+                    Actions actions = new Actions(Program.driver);
+                    actions.MoveToElement(element);
                     element.Click();
                 }
             }

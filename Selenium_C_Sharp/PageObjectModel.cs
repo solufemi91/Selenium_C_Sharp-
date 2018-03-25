@@ -53,5 +53,11 @@ namespace Selenium_C_Sharp
             }
         }
 
+        public static void Click_Date_Dropdown()
+        {
+            IReadOnlyCollection<IWebElement> element = Program.driver.FindElements(By.ClassName("search-box-group__link"));
+            element.ElementAt(2).Click();
+        }
+
     }
 }

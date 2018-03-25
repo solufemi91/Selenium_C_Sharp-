@@ -35,6 +35,8 @@ namespace Selenium_C_Sharp
             // click a airport
             PageObjectModel.Click_Arrival_Airport("Salzburg");
 
+            // click date dropdown
+            PageObjectModel.Click_Date_Dropdown();
 
             //driver.Close();
 

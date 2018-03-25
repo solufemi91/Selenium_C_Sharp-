@@ -41,6 +41,9 @@ namespace Selenium_C_Sharp
             //select month
             PageObjectModel.Select_Month("May");
 
+            //select day
+            PageObjectModel.Select_Day("21");
+
             //driver.Close();
 
         }

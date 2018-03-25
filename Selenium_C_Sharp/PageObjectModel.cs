@@ -73,6 +73,18 @@ namespace Selenium_C_Sharp
             }
         }
 
+        public static void Select_Day(String Day)
+        {
+            IReadOnlyCollection<IWebElement> elements = Program.driver.FindElements(By.ClassName("js-day"));
+            foreach (IWebElement element in elements)
+            {
+                if (element.Text == Day)
+                {
+                    element.Click();
+                }
+            }
+        }
+
 
     }
 }

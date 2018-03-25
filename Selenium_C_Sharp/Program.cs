@@ -17,13 +17,24 @@ namespace Selenium_C_Sharp
 
         static void Main(string[] args)
         {
-            
+            // Open webpage in browser
             driver.Navigate().GoToUrl("https://www.jet2holidays.com/");
             
+            //click the pop up
             PageObjectModel.ClickPopUp();
 
+            // click the dropdown for departure airports
             PageObjectModel.Click_List_Departure();
+
+            // click a airport
             PageObjectModel.Click_Departure_Airport("East Midlands (EMA)");
+
+            // click the dropdown for arrival airports
+            PageObjectModel.Click_List_Arrival();
+
+            // click a airport
+            PageObjectModel.Click_Arrival_Airport("Salzburg");
+
 
             //driver.Close();
 

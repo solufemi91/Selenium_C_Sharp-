@@ -38,6 +38,9 @@ namespace Selenium_C_Sharp
             // click date dropdown
             PageObjectModel.Click_Date_Dropdown();
 
+            //select month
+            PageObjectModel.Select_Month("May");
+
             //driver.Close();
 
         }

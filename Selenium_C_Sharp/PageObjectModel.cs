@@ -59,5 +59,20 @@ namespace Selenium_C_Sharp
             element.ElementAt(2).Click();
         }
 
+        public static void Select_Month(String Month)
+        {
+            IWebElement element = Program.driver.FindElement(By.Id("duration-month"));
+            IReadOnlyCollection<IWebElement> options = element.FindElements(By.TagName("option"));
+            foreach(IWebElement option in options)
+            {
+                String holder = option.Text;
+                if (holder.Contains(Month))
+                {
+                    option.Click();
+                }
+            }
+        }
+
+
     }
 }

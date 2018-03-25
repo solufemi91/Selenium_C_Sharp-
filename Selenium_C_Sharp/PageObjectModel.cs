@@ -36,7 +36,10 @@ namespace Selenium_C_Sharp
             foreach(IWebElement element in elements)
             {
                 if (element.Text == Location)
+
                 {
+                    Actions actions = new Actions(Program.driver);
+                    actions.MoveToElement(element);
                     element.Click();
                 }
             }
@@ -48,7 +51,10 @@ namespace Selenium_C_Sharp
             foreach (IWebElement element in elements)
             {
                 if (element.Text == Location)
+
                 {
+                    Actions actions = new Actions(Program.driver);
+                    actions.MoveToElement(element);
                     element.Click();
                 }
             }
@@ -69,6 +75,8 @@ namespace Selenium_C_Sharp
                 String holder = option.Text;
                 if (holder.Contains(Month))
                 {
+                    Actions actions = new Actions(Program.driver);
+                    actions.MoveToElement(option);
                     option.Click();
                 }
             }

@@ -27,21 +27,21 @@ namespace Selenium_C_Sharp
             PageObjectModel.Click_List_Departure();
 
             // click a airport
-            PageObjectModel.Click_Departure_Airport("London Stansted (STN)");
+            PageObjectModel.Click_Departure_Airport("(LBA)");
 
             // click the dropdown for arrival airports
             PageObjectModel.Click_List_Arrival();
 
             // click a airport
-            PageObjectModel.Click_Arrival_Airport("Salzburg");
+            PageObjectModel.Click_Arrival_Airport("Ibiza");
 
             // click date dropdown
             PageObjectModel.Click_Date_Dropdown();
 
             //select month
-            PageObjectModel.Select_Month("March");
+            PageObjectModel.Select_Month("May");
 
-            //select day. This method currently cannot scroll down the pages
+            
             //PageObjectModel.Select_Day("31");
             PageObjectModel.New_Select_Day();
 

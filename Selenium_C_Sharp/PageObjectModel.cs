@@ -35,7 +35,7 @@ namespace Selenium_C_Sharp
             IReadOnlyCollection<IWebElement> elements = Program.driver.FindElements(By.ClassName("checkbox-button-group__item"));
             foreach(IWebElement element in elements)
             {
-                if (element.Text == Location)
+                if (element.Text.Contains(Location))
 
                 {
                     Actions actions = new Actions(Program.driver);
@@ -50,7 +50,7 @@ namespace Selenium_C_Sharp
             IReadOnlyCollection<IWebElement> elements = Program.driver.FindElements(By.ClassName("checkbox-button-group__item--indent"));
             foreach (IWebElement element in elements)
             {
-                if (element.Text == Location)
+                if (element.Text.Contains(Location))
 
                 {
                     Actions actions = new Actions(Program.driver);

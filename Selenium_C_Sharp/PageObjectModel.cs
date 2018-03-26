@@ -96,6 +96,30 @@ namespace Selenium_C_Sharp
             }
         }
 
+
+        public static void New_Select_Day()
+        {
+            IReadOnlyCollection<IWebElement> elements = Program.driver.FindElements(By.ClassName("js-day"));
+            //find the first element that doesnt have a div with a class of is-disabled
+            foreach (IWebElement element in elements)
+            {
+               IWebElement DivElement = element.FindElement(By.TagName("div"));
+                
+               //Console.WriteLine(DivElement.GetAttribute("Class"));
+               if (!DivElement.GetAttribute("Class").Contains("is-disabled")) 
+               {
+                   Actions actions = new Actions(Program.driver);
+                   actions.MoveToElement(DivElement);
+                   DivElement.Click();
+
+               }
+
+
+
+            }
+
+        }
+
         public static void Select_Nights(int Nights)
         {
             IWebElement element = Program.driver.FindElement(By.Id("search-box-nights"));

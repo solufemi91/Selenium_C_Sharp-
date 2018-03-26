@@ -42,7 +42,8 @@ namespace Selenium_C_Sharp
             PageObjectModel.Select_Month("March");
 
             //select day. This method currently cannot scroll down the pages
-            PageObjectModel.Select_Day("31");
+            //PageObjectModel.Select_Day("31");
+            PageObjectModel.New_Select_Day();
 
             //select nights
             PageObjectModel.Select_Nights(0);

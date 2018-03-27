@@ -11,7 +11,7 @@ namespace Selenium_C_Sharp
 {
     class Program
     {
-        public static String PATH = "C:/webdriver/";
+        public static String PATH = "C:/webdriver";
 
         public static IWebDriver driver = new ChromeDriver(PATH);
 
@@ -19,7 +19,7 @@ namespace Selenium_C_Sharp
         {
             // Open webpage in browser
             driver.Navigate().GoToUrl("https://www.jet2holidays.com/");
-            
+
             //click the pop up
             PageObjectModel.ClickPopUp();
 
@@ -41,7 +41,7 @@ namespace Selenium_C_Sharp
             //select month
             PageObjectModel.Select_Month("May");
 
-            
+
             //PageObjectModel.Select_Day("31");
             PageObjectModel.New_Select_Day();
 
